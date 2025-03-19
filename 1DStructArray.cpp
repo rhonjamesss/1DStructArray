@@ -46,6 +46,7 @@ void addStudentData(){
             }
         }
     }
+
     students[counter].studentId = studentId;
 
     cout << "Enter First Name: ";
@@ -54,7 +55,7 @@ void addStudentData(){
     cin >> students[counter].lname;
     cout << "Enter Course: ";
     cin >> students[counter].course;
-    cout << "Enter GPA: ";
+    cout << "Enter Previous GPA: ";
     cin >> students[counter].gpa;
     
     counter++;
@@ -70,7 +71,7 @@ void editStudentData(){
     }
 
     int studentId;
-    cout << "Enter Student ID to edit: ";
+    cout << "Enter Student ID to search: ";
     cin >> studentId;
 
     for(int i = 0; i < counter; i++){
@@ -82,13 +83,13 @@ void editStudentData(){
             cout << "GPA: " << students[i].gpa << "\n";
 
             cout << "\nEnter new details: \n";
-            cout << "First Name: ";
+            cout << "Enter New First Name: ";
             cin >> students[i].fname;
-            cout << "Last Name: ";
+            cout << "Enter New Last Name: ";
             cin >> students[i].lname;
-            cout << "Course: ";
+            cout << "Enter New Course: ";
             cin >> students[i].course;
-            cout << "GPA: ";
+            cout << "Enter New Previous GPA: ";
             cin >> students[i].gpa;
             cout << "Student data updated successfully!.\n";
             return;
@@ -160,12 +161,12 @@ void displayStudentData(){
     }
 
     cout << "Student Records:\n";
-    cout << "ID | First Name | Last Name | Course | GPA\n";
+    cout << "ID | First Name \t| Last Name \t| Course \t| GPA\n";
     for(int i = 0; i < counter; i++){
         cout << students[i].studentId << " | "
-             << students[i].fname << " | "
-             << students[i].lname << " | "
-             << students[i].course << " | "
+             << students[i].fname << " \t\t| "
+             << students[i].lname << " \t| "
+             << students[i].course << " \t| "
              << students[i].gpa << "\n";
     }
 }
